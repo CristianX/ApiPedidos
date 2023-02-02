@@ -7,6 +7,13 @@ const database = require("./modulos/dbconect");
 // settings
 app.set('port', process.env.PORT || 3003);
 
+// middlewares
+app.use(cors());
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
+
 
 // PRUEBAS
 app.use('/apifactura', require('./src/ApiPedidos/Factura'));

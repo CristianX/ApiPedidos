@@ -9,7 +9,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
-    res.sendFile(process.cwd() + '/facturas/'+ id +'.pdf');
+    res.send(process.cwd() + '/facturas/'+ id +'.pdf');
 });
 
 router.post('/', (req, res) => {
