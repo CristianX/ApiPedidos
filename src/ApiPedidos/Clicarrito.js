@@ -55,13 +55,16 @@ router.post('/:cliente', async (req, res) => {
         var transporter = nodemailer.createTransport({
             service: 'hotmail',
             auth: {
-                user: 'daed_sa@hotmail.com',
-                pass: 'L4nnister'
+                user: 'danitex_2008@hotmail.com',
+                pass: 'danitex2008'
+            },
+            tls: {
+                rejectUnauthorized: false
             }
         });
 
         var mailOptions = {
-            from: 'daed_sa@hotmail.com',
+            from: 'danitex_2008@hotmail.com',
             to: correo_encrypt,
             subject: 'Recuperacion de contraseña DANITEX',
             html: texto_men
